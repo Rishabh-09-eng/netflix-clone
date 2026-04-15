@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+.main {
+    background-image: url("assets/images/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width:100%;
+    position: relative;
+}
+
+.main .box {
+    height: 90vh;
+    width: 100%;
+    opacity: 0.74;
+    position: absolute;
+    top: 0;
+    background-color: black;
+
+}
+
+nav {
+    padding-top: 1%;
+    max-width: 1200px;
+    padding:0 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+
+nav img {
+    width: 104px;
+    position: relative;
+    z-index: 1;
+}
+
+nav button {
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    height: calc(100% - 62px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    z-index: 1;
+
+    font-family: 'Martel Sans', sans-serif; 
+    gap:23px;
+    padding: 0 30px;
+
+}
+.hero> :first-child{
+    font-weight: 900;
+    font-size:56px;
+    line-height: 70px;
+    text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 800;
+    font-size:42px;
+    line-height: 50px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight:500;
+    font-size:20px;
+    line-height: 50px;
+    text-align: center;
+}
+.hero> :nth-child(4){
+    font-weight: 400;
+    font-size:16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.separation{
+    background-color: rgb(48, 48, 48);
+    height:7px;
+}
+
+.btn{
+    padding:6px 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color:white;
+    border:1px solid rgba(255, 255, 255, 0.303);
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+.btn-red{
+    background-color: red;
+    color:white;
+    padding:14px 20px;
+    font-size:16px;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius:4px;
+    border:none;
+}
+
+.btn-red-sm{
+    background-color: red;
+    color:white;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.main input{
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    font-size: 16px;
+
+    font-weight:400;
+    font-size:12px;
+    border-radius:4px;
+    background-color: rgba(23,23,23,0.7);
+    border: 1px solid rgba(225, 225, 225, 0.7);
+    color:white;
+}
+.trending h1{
+    color:white;
+    font-size: 23px;
+    padding:40px 5%;
+}
+
+.trending-row {
+    display: flex;
+    gap: 20px;
+    padding: 0 5% 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.trending-row::-webkit-scrollbar {
+    display: none;
+}
+.card {
+    position: relative;
+    min-width: 180px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    z-index: 0;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.rank {
+    position: absolute;
+    left: -15px;
+    bottom: -20px;
+    font-size: 120px;
+    font-weight: 900;
+
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+
+    z-index: 1;
+    line-height: 1;
+}
+.RTJ h1{
+    color:white;
+    font-size: 23px;
+    padding:40px 5%;
+}
+.RTJ-row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 0 5% 40px;
+}
+
+.r{
+    background: linear-gradient(145deg, #05032f, #2a293e);
+    border-radius: 12px;
+    padding:20px;
+    min-height: 200px;
+    color:white;
+
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+.r h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.r h3{
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+
+/* tablet */
+@media (max-width:900px){
+    .hero> :first-child{
+        font-size:40px;
+        line-height:50px;
+    }
+    .hero> :nth-child(2){
+        font-size:30px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+    }
+    .main input{
+        padding:10px;
+        width:100%;
+        max-width:350px;
+    }
+    .btn-red{
+        font-size:18px;
+        padding:8px 16px;
+    }
+
+    .card{
+        min-width:140px;
+    }
+    .rank{
+        font-size: 90px;
+    }
+
+    .RTJ-row{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* mobile */
+@media (max-width:600px){
+    
+    nav{
+        max-width:90vw;
+    }
+    nav img{
+        width:90px;
+    }
+    .hero > :first-child{
+        font-size:28px;
+        line-height:36px;
+    }
+    .hero > :nth-child(2){
+        font-size:22px;
+    }
+    .hero > :nth-child(3),
+    .hero > :nth-child(4) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .main input{
+        width:100%;
+    }
+
+    .trending-row{
+        padding:0 20px 30px;
+    }
+    .card{
+        min-width:120px;
+    }
+    .rank {
+        font-size: 70px;
+        left: -10px;
+        bottom: -10px;
+    }
+
+    .RTJ h1 {
+        padding: 20px;
+    }
+
+    .RTJ-row {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .r {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+.FAQ{
+    background: black;
+    color:white;
+    padding:40px 5%;
+}
+
+
+.faqbox{
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(128, 128, 128, 0.323);
+    width:100%;
+    max-width:800px;
+    margin:10px auto;
+    cursor:pointer;
+    transition: background 0.3s ease;
+}
+.faqbox:hover{
+    background-color: rgba(128, 128, 128, 0.722);
+}
+
+.membership h3{
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding-bottom: 10px;
+}
+
+.hero2{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:15px;
+}
+.m1 input{
+    padding:15px;
+    background-color:rgba(128, 128, 128, 0.244);
+    border:1px solid rgba(255, 255, 255, 0.368);
+    border-radius: 4px;
+    font-size:15px;
+    color:white;
+}
+.m2 button{
+    padding: 10px;
+    background-color: red;
+    color:white;
+    border: none;
+    border-radius: 4px;
+    font-size:25px;
+    font-weight: 600;
+}
+.m1 input,
+.m2 button {
+    width: 100%;
+    max-width: 400px;
+}
+
+footer{
+    padding: 40px 20px;
+    color:white;
+    width:100%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.footer{
+    padding:5%;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+
+footer .footer-items{
+    display:flex;
+    flex-direction: column;
+}
+.footer a{
+    text-decoration: underline;
+    color:white;
+    padding:5px;
+}
+
+footer h2{
+    font-size:15px;
+    font-weight:300;
+    padding-bottom: 5%;
+    color:lightgray
+}
+footer h3{
+    font-size:12px;
+    font-weight:300;
+    color:grey;
+}
