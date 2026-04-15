@@ -38,7 +38,15 @@ netflix-clone/
 
 ## 📸 Preview
 
-(Add screenshot here later)
+### 🎬 Landing Section
+![Landing Section](preview-1.png)
+
+### 🎞 Content & Features
+![Content Section](preview-2.png)
+
+### ❓ FAQ & Footer
+![FAQ Section](preview-3.png)
+
 
 ---
 
